@@ -16,7 +16,7 @@ const MyAddTask = () => {
         }
     })
     return (
-        <div className={information.length < 6 ? 'h-screen pt-16 px-8':'pt-16 px-8'}>
+        <div className={information.length < 3 ? 'h-screen pt-16 px-8':'pt-16 px-8'}>
             <h3 className="text-2xl font-bold text-center my-6">My Add Task </h3>
             <div className="lg:grid lg:grid-cols-3">
                 {
