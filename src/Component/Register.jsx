@@ -19,7 +19,7 @@ const Register = () => {
 
         const image = e.target.image.files[0]
         const photoUrl = await imageUpload(image)
-        console.log(name)
+        
         try {
             await createUser(email, password)
             await profileUpdate({ displayName: name, photoURL: photoUrl });

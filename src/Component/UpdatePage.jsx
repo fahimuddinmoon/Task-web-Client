@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 const UpdatePage = () => {
     const { id } = useParams()
     const { user } = useContext(AuthContext)
-    console.log(id)
+  
     const axiosSecure = UseAxios()
     const { data: allData = [], isLoading, refetch } = useQuery({
         queryKey: ['allData', id],
@@ -34,7 +34,7 @@ const UpdatePage = () => {
             });
         }
         const task = { title, description, time, category, email }
-        console.log(task)
+      
         try {
             await axiosSecure.put(`/UpdateTask/${_id}`,task)
             Swal.fire({
